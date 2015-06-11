@@ -1,5 +1,7 @@
 package com.application.restfulclient;
 
+import com.google.gson.JsonObject;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,7 +20,17 @@ public class MainActivity extends Activity {
 		myMongoLab.listDatabases();
 		myMongoLab.listCollections("choresmanagement");
 		myMongoLab.listDocuments("choresmanagement", "user");
-		myMongoLab.insertDocument("choresmanagement", "user");
+//		myMongoLab.insertDocument("choresmanagement", "user");
+		// Json object representing the query
+		JsonObject query = new JsonObject();
+		query.addProperty("name", "Donato");
+		myMongoLab.queryDocuments("choresmanagement", "user", query);
+		
+
+		// Json object representing the new value to set in the document
+		JsonObject update = new JsonObject();
+		update.addProperty("lastname", "Rossi");
+		myMongoLab.updateDocument("choresmanagement", "user", query, update);
 	}
 
 	@Override
