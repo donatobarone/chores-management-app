@@ -1,7 +1,5 @@
 package com.application.restfulclient;
 
-import com.google.gson.JsonObject;
-
 public interface MongoLabInterface {
 	
 	void listDatabases();
@@ -14,15 +12,13 @@ public interface MongoLabInterface {
 	
 	void insertDocuments();
 	
-	void updateDocument(String databaseName, String collectionName, JsonObject query, JsonObject update);
+	void updateDocument();
 	
 	void updateDocuments();
 	
 	void deleteDocument();
 	
-	void deleteDocuments();	
-
-	void queryDocuments(String databaseName, String collectionName, JsonObject query);
+	void deleteDocuments();
 	
 //	Delete/replace multiple documents
 //	View, update or delete a single document
