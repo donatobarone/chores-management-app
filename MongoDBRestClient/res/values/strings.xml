@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MongoDBRestClient</string>
+    <string name="action_settings">Settings</string>
+	<string name="mongolab_api_key">BaqHYkFSYkoL0HqQSrkDbXfvAo26NhXp</string>
+</resources>
